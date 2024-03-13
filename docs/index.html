@@ -243,137 +243,86 @@
 								
 				<div class="themes-item">						
 					<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🤩</div>
-														<span>
-															Bollywood
-														</span>
+						<div class="themes-item__title">
+							<div class="emoji">🤩</div>
+							<span>Bollywood</span>
+						</div>
+					</a>
+				</div>
+				
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🎵</div>
+							<span>Music</span>
+						</div>
+					</a>
+				</div>
 								
-													</div>
-												</a>
-											</div>
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🕌</div>
+							<span>Muslim</span>
+						</div>
+					</a>
+				</div>
+				
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">✈️</div>
+							<span>Travel</span>
+						</div>
+					</a>
+				</div>
 								
-											<div class="themes-item">
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🌊</div>
+								<span>Beach</span>
+							</div>
+					</a>
+				</div>
+				
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🎆</div>
+							<span>Neon Glow</span>
+						</div>
+					</a>
+				</div>
 								
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🚀</div>
+							<span>Ski-Fi</span>
+						</div>
+					</a>
+				</div>
+				
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">🤖</div>
+							<span>Cyberpank</span>				
+						</div>
+					</a>
+				</div>
 								
+				<div class="themes-item">
+					<a href="" class="button">
+						<div class="themes-item__title">
+							<div class="emoji">💞</div>
+							<span>Passion</span>
+						</div>
+					</a>
+				</div>
 								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🎵</div>
-														<span>
-															Music
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🕌</div>
-														<span>
-															Muslim
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">✈️</div>
-														<span>
-															Travel
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🌊</div>
-														<span>
-															Beach
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🎆</div>
-														<span>
-															Neon Glow
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🚀</div>
-														<span>
-															Ski-Fi
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">🤖</div>
-														<span>
-															Cyberpank
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
-								
-								
-								
-												<a href="" class="button">
-													<div class="themes-item__title">
-														<div class="emoji">💞</div>
-														<span>
-															Passion
-														</span>
-								
-													</div>
-												</a>
-											</div>
-								
-											<div class="themes-item">
+				<div class="themes-item">
 								
 								
 								
@@ -538,27 +487,74 @@
 	</div>
 
 	<script>
-		document.querySelector('.tabs').addEventListener('click', function(event) {
-			if (event.target.classList.contains('tab')) {
-				var targetId = event.target.getAttribute('data-target');
-				var tabItems = document.querySelectorAll('.tab__item');
-	
-				tabItems.forEach(function(tabItem) {
-					if (tabItem.id === targetId) {
-						tabItem.classList.add('active');
-					} else {
-						tabItem.classList.remove('active');
-					}
-				});
-	
-				var tabs = document.querySelectorAll('.tab');
-				tabs.forEach(function(tab) {
-					tab.classList.remove('active');
-				});
-	
-				event.target.classList.add('active');
-			}
-		});
+   
+   let startX = null;
+    let startY = null;
+    let endX = null;
+    let endY = null;
+
+    document.addEventListener('touchstart', function(event) {
+        startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchmove', function(event) {
+        endX = event.touches[0].clientX;
+        endY = event.touches[0].clientY;
+    });
+
+    document.addEventListener('touchend', function(event) {
+        var deltaX = endX - startX;
+        var deltaY = endY - startY;
+        
+        startX = null;
+        startY = null;
+        endX = null;
+        endY = null;
+
+        if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            // Swipe in horizontal direction
+            if (deltaX > 0) {
+                // Swipe right
+                var activeTab = document.querySelector('.tab.active');
+                var prevTab = activeTab.previousElementSibling;
+                if (prevTab && !prevTab.classList.contains('active')) {
+                    activeTab.classList.remove('active');
+                    prevTab.classList.add('active');
+                    document.querySelector('.tab__item.active').classList.remove('active');
+                    var targetId = prevTab.getAttribute('data-target');
+                    var targetTabItem = document.getElementById(targetId);
+                    targetTabItem.classList.add('active');
+                }
+            } else {
+                // Swipe left
+                var activeTab = document.querySelector('.tab.active');
+                var nextTab = activeTab.nextElementSibling;
+                if (nextTab && !nextTab.classList.contains('active')) {
+                    activeTab.classList.remove('active');
+                    nextTab.classList.add('active');
+                    document.querySelector('.tab__item.active').classList.remove('active');
+                    var targetId = nextTab.getAttribute('data-target');
+                    var targetTabItem = document.getElementById(targetId);
+                    targetTabItem.classList.add('active');
+                }
+            }
+        }
+    });
+
+    // Click event handler for tabs
+    document.querySelector('.tabs').addEventListener('click', function(event) {
+        if (event.target.classList.contains('tab') && !event.target.classList.contains('active')) {
+            var activeTab = document.querySelector('.tab.active');
+            activeTab.classList.remove('active');
+            event.target.classList.add('active');
+
+            document.querySelector('.tab__item.active').classList.remove('active');
+            var targetId = event.target.getAttribute('data-target');
+            var targetTabItem = document.getElementById(targetId);
+            targetTabItem.classList.add('active');
+        }
+    });
 	</script>
 </body>
 
