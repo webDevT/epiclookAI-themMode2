@@ -5,16 +5,16 @@ body *
     box-sizing: border-box
 .content
     width: 700px 
-    max-width: 92vw 
+    max-width: 95vw 
     margin-left: auto 
     margin-right: auto
-.tab__item
-    display: none 
+.tab__item-content
+    display: flex
     flex-wrap: wrap  
     justify-content: space-between
     padding-bottom: 10vw
-.tab__item.active 
-    display: flex
+
+
 .themes-item
     width: 49% 
     padding: 8px 0px 
@@ -70,10 +70,20 @@ body *
     font-size: 20px
     font-weight: 600
     cursor: pointer
+    text-align: center
 .tab.active 
     color: #3C308B
     border-bottom: 2px solid #3C308B
-
+.slider-nav .slick-current
+    color: #3C308B
+    border-bottom: 2px solid #3C308B
+.slider-nav  .slick-list
+    width: 100%
+.slider-nav .slick-track
+    transform: none !important
+.tab__item-content 
+    padding-left: 1vw 
+    padding-right: 1vw
 @import "media"
 
 
